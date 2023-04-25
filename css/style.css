@@ -1,3 +1,58 @@
-.navbar-brand img {
-   height: 64px;
+@font-face {
+   font-family: Anton;
+   src: url(/fonts/Anton-Regular.ttf);
 }
+@font-face {
+   font-family: California;
+   src:url(/fonts/California\ Paradise.otf);
+}
+@font-face {
+   font-family: Peddana;
+   src:url(/fonts/Peddana-Regular.ttf);
+}
+
+.navbar-brand img {
+   height: 86px;
+}
+
+body {
+   background-color:lightgoldenrodyellow;
+}
+
+h1 {
+   color:lightgoldenrodyellow;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   justify-content: center;
+   
+}
+
+.section-info {
+   display: flex;
+   margin: 50px;
+   justify-content: center;
+   gap: 50px;
+}
+
+.section-info img {
+   width: 40%;
+}
+
+p {
+   font-weight: 700;
+}
+
+footer {
+     display: flex;
+     background-color: black;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     width: 100%;
+     bottom: 0;
+     height: 100px;
+     gap: 100px;
+
+     
+  }
+
+
