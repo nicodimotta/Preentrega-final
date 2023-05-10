@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    height: 100px;
+    margin-top: 50px;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-contacto {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  
