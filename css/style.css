@@ -64,7 +64,7 @@ h2 {
   font-weight: bold;
 }
 
-body {
+.back-body, .back-body1 {
   background-image: url(../images/backgyellow.webp);
   background-size: cover;
   background-size: auto;
@@ -94,6 +94,13 @@ body {
   background-color: black;
   color: yellow;
   text-align: center;
+}
+
+.carousel-inner {
+  display: flex;
+}
+.carousel-inner img {
+  height: 600px;
 }
 
 footer {
@@ -141,6 +148,20 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .footer-hibrid {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .footer-hibrid {
+    bottom: 0;
+    width: 100%;
   }
 }
 

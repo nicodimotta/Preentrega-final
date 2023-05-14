@@ -7,8 +7,8 @@
     .galeria-imagen {
       position: relative;
       img {
-        width: 100%;
-        height: auto;
+        width:100%;
+        height:auto;
       }
       h3 {
       position:absolute;
@@ -24,4 +24,11 @@
       }
     }
   
+  }
+
+  .carousel-inner{
+    display: flex;
+    img {
+      height: 600px;
+    }
   }

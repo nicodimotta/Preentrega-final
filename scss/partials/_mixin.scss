@@ -1,0 +1,4 @@
+@mixin position($position) {
+    display: flex;
+    position: $position;
+}
