@@ -1,48 +1,20 @@
 @import 'partials/fonts';
 @import 'partials/variables';
 @import 'partials/navbar';
+@import 'partials/titulos';
 @import 'partials/body';
+@import 'partials/galeria';
 @import 'partials/footer';
+@import 'partials/queries';
 
-h1 {
-    color:$color-primary;
-    font-family: 'Righteous';
-    justify-content: center;
- }
 
- h2 {
-    text-align: center;
-    font-weight: bold;
-   
- }
 
- .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 10px;
-    margin: 10px;
-  }
+
+
   
-  .galeria-imagen {
-    position: relative;
-    img {
-      width: 100%;
-      height: auto;
-    }
-    h3 {
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    margin: 0;
-    background-color:black;
-    color: #ffff00;
-    text-align: center;
 
-    }
-  }
+
+  
   
  
  

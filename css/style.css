@@ -10,10 +10,90 @@
   height: 128px;
 }
 
+a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+a::before, a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+a::before {
+  background-color: yellow;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: yellow;
+}
+a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+a span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+h1 {
+  color: yellow;
+  font-family: Righteous;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
 body {
   background-image: url(../images/backgyellow.webp);
   background-size: cover;
   background-size: auto;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 10px;
+  margin: 10px;
+}
+.galeria .galeria-imagen {
+  position: relative;
+}
+.galeria .galeria-imagen img {
+  width: 100%;
+  height: auto;
+}
+.galeria .galeria-imagen h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  background-color: black;
+  color: yellow;
+  text-align: center;
 }
 
 footer {
@@ -32,42 +112,36 @@ footer {
   width: 100%;
 }
 
-h1 {
-  color: yellow;
-  font-family: "Righteous";
-  justify-content: center;
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer-control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
-
-h2 {
-  text-align: center;
-  font-weight: bold;
+@media (min-width: 601px) and (max-width: 1024px) {
+  .galeria {
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .footer-control {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 10px;
-  margin: 10px;
-}
-
-.galeria-imagen {
-  position: relative;
-}
-.galeria-imagen img {
-  width: 100%;
-  height: auto;
-}
-.galeria-imagen h3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-  margin: 0;
-  background-color: black;
-  color: #ffff00;
-  text-align: center;
+@media (min-width: 1025px) {
+  .galeria {
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .footer-control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

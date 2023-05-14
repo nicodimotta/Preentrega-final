@@ -1,0 +1,33 @@
+@media (max-width: 600px) {
+    .galeria {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-control {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .galeria {
+      grid-template-columns: repeat(2, 2fr);
+    }
+    .footer-control {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .galeria {
+      grid-template-columns: repeat(2, 2fr);
+    }
+    .footer-control {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }

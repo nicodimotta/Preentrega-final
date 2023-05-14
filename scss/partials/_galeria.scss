@@ -1,0 +1,27 @@
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    margin: 10px;
+    .galeria-imagen {
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      h3 {
+      position:absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      margin: 0;
+      background-color:black;
+      color: $color-primary;
+      text-align: center;
+  
+      }
+    }
+  
+  }
